@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		900060FC226D447A0022B686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900060FB226D447A0022B686 /* AppDelegate.swift */; };
+		90006103226D447A0022B686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90006101226D447A0022B686 /* Main.storyboard */; };
+		90006105226D447B0022B686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90006104226D447B0022B686 /* Assets.xcassets */; };
+		90006108226D447B0022B686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90006106226D447B0022B686 /* LaunchScreen.storyboard */; };
+		90006113226D447B0022B686 /* HeadacheTracker2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */; };
+		9000611E226D447B0022B686 /* HeadacheTracker2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */; };
+		9000612C226D493C0022B686 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000612B226D493C0022B686 /* CoreDataStack.swift */; };
+		90269F372296197C00A6EB6F /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */; };
+		90269F3C22961A1700A6EB6F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */; };
+		90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3F229778B300A6EB6F /* MADCalendar.swift */; };
+		90269F422299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */; };
+		908FA68D228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */; };
+		908FA690228F4B1C00A80E72 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */; };
+		908FA69222909D6000A80E72 /* SeverityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */; };
+		908FA6942291BA7100A80E72 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6932291BA7100A80E72 /* NoteTableViewCell.swift */; };
+		908FA6962291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6952291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift */; };
+		908FA6982292253B00A80E72 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6972292253B00A80E72 /* SettingsTableViewController.swift */; };
+		908FA69A2294D02400A80E72 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6992294D02400A80E72 /* Utilities.swift */; };
+		90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */; };
+		90F61CA42276148500BE47A4 /* HeadacheTracker2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA22276148500BE47A4 /* HeadacheTracker2.xcdatamodeld */; };
+		90F61CAC2276167C00BE47A4 /* Headache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */; };
+		90F61CAD2276167C00BE47A4 /* Headache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CAB2276167C00BE47A4 /* Headache+CoreDataProperties.swift */; };
+		90F61CB02276382000BE47A4 /* HeadacheTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CAF2276382000BE47A4 /* HeadacheTableViewCell.swift */; };
+		90F61CB222763A3700BE47A4 /* HeadacheDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CB122763A3700BE47A4 /* HeadacheDetailTableViewController.swift */; };
+		90F61CB422763BD900BE47A4 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CB322763BD900BE47A4 /* DatePickerTableViewCell.swift */; };
+		90F61CB622767FE200BE47A4 /* MedicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CB522767FE200BE47A4 /* MedicationTableViewController.swift */; };
+		90F61CBB2277D15600BE47A4 /* Medication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CB72277D15600BE47A4 /* Medication+CoreDataClass.swift */; };
+		90F61CBC2277D15600BE47A4 /* Medication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CB82277D15600BE47A4 /* Medication+CoreDataProperties.swift */; };
+		90F61CBD2277D15600BE47A4 /* Dose+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CB92277D15600BE47A4 /* Dose+CoreDataClass.swift */; };
+		90F61CBE2277D15600BE47A4 /* Dose+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CBA2277D15600BE47A4 /* Dose+CoreDataProperties.swift */; };
+		90F61CC02279176E00BE47A4 /* MedicationDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CBF2279176E00BE47A4 /* MedicationDetailTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9000610F226D447B0022B686 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900060F0226D447A0022B686 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 900060F7226D447A0022B686;
+			remoteInfo = HeadacheTracker2;
+		};
+		9000611A226D447B0022B686 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900060F0226D447A0022B686 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 900060F7226D447A0022B686;
+			remoteInfo = HeadacheTracker2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		900060F8226D447A0022B686 /* HeadacheTracker2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadacheTracker2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		900060FB226D447A0022B686 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90006102226D447A0022B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90006104226D447B0022B686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90006107226D447B0022B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90006109226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9000610E226D447B0022B686 /* HeadacheTracker2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2Tests.swift; sourceTree = "<group>"; };
+		90006114226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2UITests.swift; sourceTree = "<group>"; };
+		9000611F226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9000612B226D493C0022B686 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
+		90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		90269F3F229778B300A6EB6F /* MADCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendar.swift; sourceTree = "<group>"; };
+		90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionReusableHeaderView.swift; sourceTree = "<group>"; };
+		908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClassTests.swift"; sourceTree = "<group>"; };
+		908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
+		908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityTableViewCell.swift; sourceTree = "<group>"; };
+		908FA6932291BA7100A80E72 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		908FA6952291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheMedicationTableViewCell.swift; sourceTree = "<group>"; };
+		908FA6972292253B00A80E72 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		908FA6992294D02400A80E72 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTableViewController.swift; sourceTree = "<group>"; };
+		90F61CA32276148500BE47A4 /* HeadacheTracker2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadacheTracker2.xcdatamodel; sourceTree = "<group>"; };
+		90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClass.swift"; sourceTree = "<group>"; };
+		90F61CAB2276167C00BE47A4 /* Headache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90F61CAF2276382000BE47A4 /* HeadacheTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTableViewCell.swift; sourceTree = "<group>"; };
+		90F61CB122763A3700BE47A4 /* HeadacheDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheDetailTableViewController.swift; sourceTree = "<group>"; };
+		90F61CB322763BD900BE47A4 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		90F61CB522767FE200BE47A4 /* MedicationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewController.swift; sourceTree = "<group>"; };
+		90F61CB72277D15600BE47A4 /* Medication+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataClass.swift"; sourceTree = "<group>"; };
+		90F61CB82277D15600BE47A4 /* Medication+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90F61CB92277D15600BE47A4 /* Dose+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dose+CoreDataClass.swift"; sourceTree = "<group>"; };
+		90F61CBA2277D15600BE47A4 /* Dose+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dose+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90F61CBF2279176E00BE47A4 /* MedicationDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		900060F5226D447A0022B686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9000610B226D447B0022B686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90006116226D447B0022B686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		900060EF226D447A0022B686 = {
+			isa = PBXGroup;
+			children = (
+				900060FA226D447A0022B686 /* HeadacheTracker2 */,
+				90F61CAE2276168700BE47A4 /* CoreData */,
+				90006111226D447B0022B686 /* HeadacheTracker2Tests */,
+				9000611C226D447B0022B686 /* HeadacheTracker2UITests */,
+				900060F9226D447A0022B686 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		900060F9226D447A0022B686 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				900060F8226D447A0022B686 /* HeadacheTracker2.app */,
+				9000610E226D447B0022B686 /* HeadacheTracker2Tests.xctest */,
+				90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		900060FA226D447A0022B686 /* HeadacheTracker2 */ = {
+			isa = PBXGroup;
+			children = (
+				900060FB226D447A0022B686 /* AppDelegate.swift */,
+				90269F382296198900A6EB6F /* Headache Tab */,
+				90269F392296199300A6EB6F /* Calendar Tab */,
+				90269F3A2296199B00A6EB6F /* Settings Tab */,
+				90006101226D447A0022B686 /* Main.storyboard */,
+				90006106226D447B0022B686 /* LaunchScreen.storyboard */,
+				90006104226D447B0022B686 /* Assets.xcassets */,
+				90006109226D447B0022B686 /* Info.plist */,
+				908FA6992294D02400A80E72 /* Utilities.swift */,
+				90269F43229A16C600A6EB6F /* Models */,
+			);
+			path = HeadacheTracker2;
+			sourceTree = "<group>";
+		};
+		90006111226D447B0022B686 /* HeadacheTracker2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				908FA68E228F4AE600A80E72 /* Mocks */,
+				908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */,
+				90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */,
+				90006114226D447B0022B686 /* Info.plist */,
+			);
+			path = HeadacheTracker2Tests;
+			sourceTree = "<group>";
+		};
+		9000611C226D447B0022B686 /* HeadacheTracker2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */,
+				9000611F226D447B0022B686 /* Info.plist */,
+			);
+			path = HeadacheTracker2UITests;
+			sourceTree = "<group>";
+		};
+		90269F382296198900A6EB6F /* Headache Tab */ = {
+			isa = PBXGroup;
+			children = (
+				90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */,
+				90F61CAF2276382000BE47A4 /* HeadacheTableViewCell.swift */,
+				90F61CB122763A3700BE47A4 /* HeadacheDetailTableViewController.swift */,
+				90F61CB322763BD900BE47A4 /* DatePickerTableViewCell.swift */,
+				908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */,
+				908FA6952291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift */,
+				908FA6932291BA7100A80E72 /* NoteTableViewCell.swift */,
+				90F61CB522767FE200BE47A4 /* MedicationTableViewController.swift */,
+				90F61CBF2279176E00BE47A4 /* MedicationDetailTableViewController.swift */,
+			);
+			path = "Headache Tab";
+			sourceTree = "<group>";
+		};
+		90269F392296199300A6EB6F /* Calendar Tab */ = {
+			isa = PBXGroup;
+			children = (
+				90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */,
+				90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */,
+				90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */,
+			);
+			path = "Calendar Tab";
+			sourceTree = "<group>";
+		};
+		90269F3A2296199B00A6EB6F /* Settings Tab */ = {
+			isa = PBXGroup;
+			children = (
+				908FA6972292253B00A80E72 /* SettingsTableViewController.swift */,
+			);
+			path = "Settings Tab";
+			sourceTree = "<group>";
+		};
+		90269F43229A16C600A6EB6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90269F3F229778B300A6EB6F /* MADCalendar.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		908FA68E228F4AE600A80E72 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		90F61CAE2276168700BE47A4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9000612B226D493C0022B686 /* CoreDataStack.swift */,
+				90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */,
+				90F61CAB2276167C00BE47A4 /* Headache+CoreDataProperties.swift */,
+				90F61CB72277D15600BE47A4 /* Medication+CoreDataClass.swift */,
+				90F61CB82277D15600BE47A4 /* Medication+CoreDataProperties.swift */,
+				90F61CB92277D15600BE47A4 /* Dose+CoreDataClass.swift */,
+				90F61CBA2277D15600BE47A4 /* Dose+CoreDataProperties.swift */,
+				90F61CA22276148500BE47A4 /* HeadacheTracker2.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		900060F7226D447A0022B686 /* HeadacheTracker2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90006122226D447B0022B686 /* Build configuration list for PBXNativeTarget "HeadacheTracker2" */;
+			buildPhases = (
+				900060F4226D447A0022B686 /* Sources */,
+				900060F5226D447A0022B686 /* Frameworks */,
+				900060F6226D447A0022B686 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadacheTracker2;
+			productName = HeadacheTracker2;
+			productReference = 900060F8226D447A0022B686 /* HeadacheTracker2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9000610D226D447B0022B686 /* HeadacheTracker2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90006125226D447B0022B686 /* Build configuration list for PBXNativeTarget "HeadacheTracker2Tests" */;
+			buildPhases = (
+				9000610A226D447B0022B686 /* Sources */,
+				9000610B226D447B0022B686 /* Frameworks */,
+				9000610C226D447B0022B686 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90006110226D447B0022B686 /* PBXTargetDependency */,
+			);
+			name = HeadacheTracker2Tests;
+			productName = HeadacheTracker2Tests;
+			productReference = 9000610E226D447B0022B686 /* HeadacheTracker2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90006118226D447B0022B686 /* HeadacheTracker2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90006128226D447B0022B686 /* Build configuration list for PBXNativeTarget "HeadacheTracker2UITests" */;
+			buildPhases = (
+				90006115226D447B0022B686 /* Sources */,
+				90006116226D447B0022B686 /* Frameworks */,
+				90006117226D447B0022B686 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9000611B226D447B0022B686 /* PBXTargetDependency */,
+			);
+			name = HeadacheTracker2UITests;
+			productName = HeadacheTracker2UITests;
+			productReference = 90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		900060F0226D447A0022B686 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Morgan Davison";
+				TargetAttributes = {
+					900060F7226D447A0022B686 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					9000610D226D447B0022B686 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 900060F7226D447A0022B686;
+					};
+					90006118226D447B0022B686 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 900060F7226D447A0022B686;
+					};
+				};
+			};
+			buildConfigurationList = 900060F3226D447A0022B686 /* Build configuration list for PBXProject "HeadacheTracker2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 900060EF226D447A0022B686;
+			productRefGroup = 900060F9226D447A0022B686 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				900060F7226D447A0022B686 /* HeadacheTracker2 */,
+				9000610D226D447B0022B686 /* HeadacheTracker2Tests */,
+				90006118226D447B0022B686 /* HeadacheTracker2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		900060F6226D447A0022B686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90006108226D447B0022B686 /* LaunchScreen.storyboard in Resources */,
+				90006105226D447B0022B686 /* Assets.xcassets in Resources */,
+				90006103226D447A0022B686 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9000610C226D447B0022B686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90006117226D447B0022B686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		900060F4226D447A0022B686 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908FA69222909D6000A80E72 /* SeverityTableViewCell.swift in Sources */,
+				90F61CBC2277D15600BE47A4 /* Medication+CoreDataProperties.swift in Sources */,
+				90269F422299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift in Sources */,
+				90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */,
+				90F61CBD2277D15600BE47A4 /* Dose+CoreDataClass.swift in Sources */,
+				90F61CA42276148500BE47A4 /* HeadacheTracker2.xcdatamodeld in Sources */,
+				908FA6942291BA7100A80E72 /* NoteTableViewCell.swift in Sources */,
+				90F61CAD2276167C00BE47A4 /* Headache+CoreDataProperties.swift in Sources */,
+				90269F372296197C00A6EB6F /* CalendarCollectionViewController.swift in Sources */,
+				90269F3C22961A1700A6EB6F /* CalendarCollectionViewCell.swift in Sources */,
+				90F61CB02276382000BE47A4 /* HeadacheTableViewCell.swift in Sources */,
+				900060FC226D447A0022B686 /* AppDelegate.swift in Sources */,
+				90F61CBB2277D15600BE47A4 /* Medication+CoreDataClass.swift in Sources */,
+				90F61CB222763A3700BE47A4 /* HeadacheDetailTableViewController.swift in Sources */,
+				908FA6962291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift in Sources */,
+				90F61CAC2276167C00BE47A4 /* Headache+CoreDataClass.swift in Sources */,
+				90F61CC02279176E00BE47A4 /* MedicationDetailTableViewController.swift in Sources */,
+				90F61CBE2277D15600BE47A4 /* Dose+CoreDataProperties.swift in Sources */,
+				908FA6982292253B00A80E72 /* SettingsTableViewController.swift in Sources */,
+				90F61CB622767FE200BE47A4 /* MedicationTableViewController.swift in Sources */,
+				9000612C226D493C0022B686 /* CoreDataStack.swift in Sources */,
+				908FA69A2294D02400A80E72 /* Utilities.swift in Sources */,
+				90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */,
+				90F61CB422763BD900BE47A4 /* DatePickerTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9000610A226D447B0022B686 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908FA68D228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift in Sources */,
+				908FA690228F4B1C00A80E72 /* MockCoreDataStack.swift in Sources */,
+				90006113226D447B0022B686 /* HeadacheTracker2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90006115226D447B0022B686 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9000611E226D447B0022B686 /* HeadacheTracker2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90006110226D447B0022B686 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 900060F7226D447A0022B686 /* HeadacheTracker2 */;
+			targetProxy = 9000610F226D447B0022B686 /* PBXContainerItemProxy */;
+		};
+		9000611B226D447B0022B686 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 900060F7226D447A0022B686 /* HeadacheTracker2 */;
+			targetProxy = 9000611A226D447B0022B686 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90006101226D447A0022B686 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90006102226D447A0022B686 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90006106226D447B0022B686 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90006107226D447B0022B686 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90006120226D447B0022B686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90006121226D447B0022B686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90006123226D447B0022B686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90006124226D447B0022B686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		90006126226D447B0022B686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadacheTracker2.app/HeadacheTracker2";
+			};
+			name = Debug;
+		};
+		90006127226D447B0022B686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadacheTracker2.app/HeadacheTracker2";
+			};
+			name = Release;
+		};
+		90006129226D447B0022B686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadacheTracker2;
+			};
+			name = Debug;
+		};
+		9000612A226D447B0022B686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadacheTracker2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900060F3226D447A0022B686 /* Build configuration list for PBXProject "HeadacheTracker2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90006120226D447B0022B686 /* Debug */,
+				90006121226D447B0022B686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90006122226D447B0022B686 /* Build configuration list for PBXNativeTarget "HeadacheTracker2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90006123226D447B0022B686 /* Debug */,
+				90006124226D447B0022B686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90006125226D447B0022B686 /* Build configuration list for PBXNativeTarget "HeadacheTracker2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90006126226D447B0022B686 /* Debug */,
+				90006127226D447B0022B686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90006128226D447B0022B686 /* Build configuration list for PBXNativeTarget "HeadacheTracker2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90006129226D447B0022B686 /* Debug */,
+				9000612A226D447B0022B686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90F61CA22276148500BE47A4 /* HeadacheTracker2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90F61CA32276148500BE47A4 /* HeadacheTracker2.xcdatamodel */,
+			);
+			currentVersion = 90F61CA32276148500BE47A4 /* HeadacheTracker2.xcdatamodel */;
+			path = HeadacheTracker2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 900060F0226D447A0022B686 /* Project object */;
+}
