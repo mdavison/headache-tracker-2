@@ -14,6 +14,10 @@
 		90006113226D447B0022B686 /* HeadacheTracker2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */; };
 		9000611E226D447B0022B686 /* HeadacheTracker2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */; };
 		9000612C226D493C0022B686 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000612B226D493C0022B686 /* CoreDataStack.swift */; };
+		900C0EA522A422150077E653 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900C0EA222A421780077E653 /* Charts.framework */; };
+		900C0EA622A422150077E653 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 900C0EA222A421780077E653 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		900C0EAC22A427E80077E653 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EAB22A427E80077E653 /* ChartsViewController.swift */; };
+		900C0EB422A46EFF0077E653 /* ChartValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */; };
 		90269F372296197C00A6EB6F /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */; };
 		90269F3C22961A1700A6EB6F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */; };
 		90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3F229778B300A6EB6F /* MADCalendar.swift */; };
@@ -55,7 +59,42 @@
 			remoteGlobalIDString = 900060F7226D447A0022B686;
 			remoteInfo = HeadacheTracker2;
 		};
+		900C0EA122A421780077E653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900C0E9C22A421780077E653 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		900C0EA322A421780077E653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900C0E9C22A421780077E653 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		900C0EA722A422150077E653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900C0E9C22A421780077E653 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		900C0EA922A422150077E653 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				900C0EA622A422150077E653 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		900060F8226D447A0022B686 /* HeadacheTracker2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadacheTracker2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +110,9 @@
 		9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2UITests.swift; sourceTree = "<group>"; };
 		9000611F226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9000612B226D493C0022B686 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		900C0E9C22A421780077E653 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Github Downloads/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		900C0EAB22A427E80077E653 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueFormatter.swift; sourceTree = "<group>"; };
 		90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		90269F3F229778B300A6EB6F /* MADCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendar.swift; sourceTree = "<group>"; };
@@ -102,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900C0EA522A422150077E653 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +168,7 @@
 		900060EF226D447A0022B686 = {
 			isa = PBXGroup;
 			children = (
+				900C0E9C22A421780077E653 /* Charts.xcodeproj */,
 				900060FA226D447A0022B686 /* HeadacheTracker2 */,
 				90F61CAE2276168700BE47A4 /* CoreData */,
 				90006111226D447B0022B686 /* HeadacheTracker2Tests */,
@@ -149,6 +193,7 @@
 				900060FB226D447A0022B686 /* AppDelegate.swift */,
 				90269F382296198900A6EB6F /* Headache Tab */,
 				90269F392296199300A6EB6F /* Calendar Tab */,
+				900C0EAA22A427BA0077E653 /* Charts Tab */,
 				90269F3A2296199B00A6EB6F /* Settings Tab */,
 				90006101226D447A0022B686 /* Main.storyboard */,
 				90006106226D447B0022B686 /* LaunchScreen.storyboard */,
@@ -178,6 +223,23 @@
 				9000611F226D447B0022B686 /* Info.plist */,
 			);
 			path = HeadacheTracker2UITests;
+			sourceTree = "<group>";
+		};
+		900C0E9D22A421780077E653 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				900C0EA222A421780077E653 /* Charts.framework */,
+				900C0EA422A421780077E653 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		900C0EAA22A427BA0077E653 /* Charts Tab */ = {
+			isa = PBXGroup;
+			children = (
+				900C0EAB22A427E80077E653 /* ChartsViewController.swift */,
+			);
+			path = "Charts Tab";
 			sourceTree = "<group>";
 		};
 		90269F382296198900A6EB6F /* Headache Tab */ = {
@@ -218,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				90269F3F229778B300A6EB6F /* MADCalendar.swift */,
+				900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,10 +318,12 @@
 				900060F4226D447A0022B686 /* Sources */,
 				900060F5226D447A0022B686 /* Frameworks */,
 				900060F6226D447A0022B686 /* Resources */,
+				900C0EA922A422150077E653 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				900C0EA822A422150077E653 /* PBXTargetDependency */,
 			);
 			name = HeadacheTracker2;
 			productName = HeadacheTracker2;
@@ -335,6 +400,12 @@
 			mainGroup = 900060EF226D447A0022B686;
 			productRefGroup = 900060F9226D447A0022B686 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 900C0E9D22A421780077E653 /* Products */;
+					ProjectRef = 900C0E9C22A421780077E653 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				900060F7226D447A0022B686 /* HeadacheTracker2 */,
@@ -343,6 +414,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		900C0EA222A421780077E653 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 900C0EA122A421780077E653 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		900C0EA422A421780077E653 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 900C0EA322A421780077E653 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		900060F6226D447A0022B686 /* Resources */ = {
@@ -377,7 +465,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				908FA69222909D6000A80E72 /* SeverityTableViewCell.swift in Sources */,
+				900C0EAC22A427E80077E653 /* ChartsViewController.swift in Sources */,
 				90F61CBC2277D15600BE47A4 /* Medication+CoreDataProperties.swift in Sources */,
+				900C0EB422A46EFF0077E653 /* ChartValueFormatter.swift in Sources */,
 				90269F422299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift in Sources */,
 				90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */,
 				90F61CBD2277D15600BE47A4 /* Dose+CoreDataClass.swift in Sources */,
@@ -433,6 +523,11 @@
 			isa = PBXTargetDependency;
 			target = 900060F7226D447A0022B686 /* HeadacheTracker2 */;
 			targetProxy = 9000611A226D447B0022B686 /* PBXContainerItemProxy */;
+		};
+		900C0EA822A422150077E653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 900C0EA722A422150077E653 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -575,6 +670,7 @@
 		90006123226D447B0022B686 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TEP68NZCD;
@@ -593,6 +689,7 @@
 		90006124226D447B0022B686 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TEP68NZCD;

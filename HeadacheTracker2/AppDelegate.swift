@@ -28,7 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let calendarNav = tabBarController.viewControllers?[1] as? UINavigationController,
             let calendarViewController = calendarNav.viewControllers[0] as? CalendarCollectionViewController,
             
-            let settingsNav = tabBarController.viewControllers?[2] as? UINavigationController,
+            let chartsNav = tabBarController.viewControllers?[2] as? UINavigationController,
+            let chartsViewController = chartsNav.viewControllers[0] as? ChartsViewController,
+            
+            let settingsNav = tabBarController.viewControllers?[3] as? UINavigationController,
             let settingsViewController = settingsNav.viewControllers[0] as? SettingsTableViewController
         else {
             os_log("App Delegate: Could not initialize all the view controllers", type: .error)
@@ -37,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         headacheViewController.coreDataStack = coreDataStack
         calendarViewController.coreDataStack = coreDataStack
+        chartsViewController.coreDataStack = coreDataStack
         settingsViewController.coreDataStack = coreDataStack
         
         return true

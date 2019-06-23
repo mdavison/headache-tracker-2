@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -649,7 +650,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECE-Ev-jud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="1205"/>
+            <point key="canvasLocation" x="1528" y="1734"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -663,7 +664,8 @@
                     <connections>
                         <segue destination="e12-oL-QRz" kind="relationship" relationship="viewControllers" id="ejS-Je-ftz"/>
                         <segue destination="RLV-Uv-Y51" kind="relationship" relationship="viewControllers" id="QBd-d2-ebM"/>
-                        <segue destination="SCn-oS-4Y9" kind="relationship" relationship="viewControllers" id="Sq4-9F-Dgy"/>
+                        <segue destination="m3Z-YH-Ek5" kind="relationship" relationship="viewControllers" id="Ebe-5l-pmf"/>
+                        <segue destination="SCn-oS-4Y9" kind="relationship" relationship="viewControllers" id="dC4-fY-h8R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -743,6 +745,81 @@
             </objects>
             <point key="canvasLocation" x="4953.6231884057979" y="-386.38392857142856"/>
         </scene>
+        <!--Charts View Controller-->
+        <scene sceneID="QfJ-KK-J5K">
+            <objects>
+                <viewController id="RFu-rE-geC" customClass="ChartsViewController" customModule="HeadacheTracker2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4a6-Lv-Rsi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-df-fUe" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="176" width="374" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oM2-nl-pU2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSM-ER-2Z8">
+                                        <rect key="frame" x="20" y="10" width="272" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1900" minimumValue="1900" maximumValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="gH7-Ff-zEJ">
+                                        <rect key="frame" x="300" y="7.5" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="updateYear:" destination="RFu-rE-geC" eventType="valueChanged" id="eH4-Co-9uY"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gH7-Ff-zEJ" firstAttribute="leading" secondItem="BSM-ER-2Z8" secondAttribute="trailing" constant="8" symbolic="YES" id="17Z-18-bJE"/>
+                                    <constraint firstItem="BSM-ER-2Z8" firstAttribute="centerY" secondItem="oM2-nl-pU2" secondAttribute="centerY" id="6sh-yW-ZNV"/>
+                                    <constraint firstAttribute="height" constant="44" id="s84-BB-LXn"/>
+                                    <constraint firstItem="gH7-Ff-zEJ" firstAttribute="centerY" secondItem="oM2-nl-pU2" secondAttribute="centerY" id="t1o-ds-z0v"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-yD-Okm">
+                                <rect key="frame" x="20" y="140" width="374" height="29"/>
+                                <segments>
+                                    <segment title="Bar Chart"/>
+                                    <segment title="Pie Chart"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fQh-yD-Okm" firstAttribute="leading" secondItem="eKR-df-fUe" secondAttribute="leading" id="4dH-FS-f6t"/>
+                            <constraint firstItem="eKR-df-fUe" firstAttribute="leading" secondItem="4a6-Lv-Rsi" secondAttribute="leadingMargin" id="AGC-kW-5t4"/>
+                            <constraint firstItem="gH7-Ff-zEJ" firstAttribute="trailing" secondItem="eKR-df-fUe" secondAttribute="trailing" id="DRr-5o-Abg"/>
+                            <constraint firstItem="03E-WC-Xes" firstAttribute="bottom" secondItem="eKR-df-fUe" secondAttribute="bottom" id="NSR-Qk-f5c"/>
+                            <constraint firstItem="eKR-df-fUe" firstAttribute="trailing" secondItem="4a6-Lv-Rsi" secondAttribute="trailingMargin" id="PH0-Zu-qCQ"/>
+                            <constraint firstItem="eKR-df-fUe" firstAttribute="top" secondItem="fQh-yD-Okm" secondAttribute="bottom" constant="8" symbolic="YES" id="Vi7-BD-IU1"/>
+                            <constraint firstItem="oM2-nl-pU2" firstAttribute="leading" secondItem="03E-WC-Xes" secondAttribute="leading" id="W6L-Ge-htk"/>
+                            <constraint firstItem="fQh-yD-Okm" firstAttribute="top" secondItem="oM2-nl-pU2" secondAttribute="bottom" constant="8" symbolic="YES" id="WPH-M5-MQt"/>
+                            <constraint firstItem="oM2-nl-pU2" firstAttribute="trailing" secondItem="03E-WC-Xes" secondAttribute="trailing" id="cOv-HA-Vqu"/>
+                            <constraint firstItem="oM2-nl-pU2" firstAttribute="top" secondItem="03E-WC-Xes" secondAttribute="top" id="fh0-9F-7je"/>
+                            <constraint firstItem="fQh-yD-Okm" firstAttribute="trailing" secondItem="eKR-df-fUe" secondAttribute="trailing" id="qoE-p5-hEZ"/>
+                            <constraint firstItem="BSM-ER-2Z8" firstAttribute="leading" secondItem="eKR-df-fUe" secondAttribute="leading" id="zih-ry-S5m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="03E-WC-Xes"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GJX-aD-5xK">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barChartView" destination="eKR-df-fUe" id="mKn-R7-Uvl"/>
+                        <outlet property="yearLabel" destination="BSM-ER-2Z8" id="OST-eI-oqA"/>
+                        <outlet property="yearSelectionView" destination="oM2-nl-pU2" id="U98-KR-y7v"/>
+                        <outlet property="yearStepper" destination="gH7-Ff-zEJ" id="xmj-NY-KEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7h-bh-a9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527.536231884058" y="1048.6607142857142"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="Zps-VE-fUG">
             <objects>
@@ -760,7 +837,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WR1-Fi-nHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="1206"/>
+            <point key="canvasLocation" x="825" y="1737"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="JSP-xN-5XL">
@@ -780,6 +857,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8N-1Q-evZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824.63768115942037" y="300"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="1Ct-rJ-VEh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m3Z-YH-Ek5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Charts" id="qLQ-k3-rmE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cte-ds-Ukd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RFu-rE-geC" kind="relationship" relationship="rootViewController" id="nCi-K0-9YZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTM-lW-ILC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.63768115942037" y="1048.6607142857142"/>
         </scene>
     </scenes>
     <resources>

@@ -9,6 +9,7 @@
 
 import UIKit
 import CoreData
+import Charts
 
 @objc(Headache)
 public class Headache: NSManagedObject {
@@ -98,6 +99,52 @@ public class Headache: NSManagedObject {
         }
         
         return nil
+    }
+    
+    class func getBarChartData(for year: Int, coreDataStack: CoreDataStack) -> BarChartData? {
+        let calendar = Calendar.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        guard let startDate = dateFormatter.date(from: "\(year)") else { return nil }
+        let endDateString = "\(year + 1)"
+        guard let endDate = dateFormatter.date(from: endDateString) else { return nil }
+        
+        guard let headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack) else {
+            return nil
+        }
+        
+        var headachesPerMonth = [
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0,
+            8: 0,
+            9: 0,
+            10: 0,
+            11: 0,
+            12: 0
+        ]
+        
+        for headache in headaches {
+            let month = calendar.component(.month, from: headache.date)
+            if let hpm = headachesPerMonth[month] {
+                headachesPerMonth[month] = hpm + 1
+            }
+        }
+        
+        var dataEntries: [BarChartDataEntry] = []
+        for (month, num) in headachesPerMonth {
+            let dataEntry = BarChartDataEntry(x: Double(month), y: Double(num))
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Number of Headaches")
+        let chartData = BarChartData(dataSets: [chartDataSet])
+        
+        return chartData
     }
     
     
