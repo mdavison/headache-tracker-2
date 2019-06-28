@@ -18,6 +18,8 @@
 		900C0EA622A422150077E653 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 900C0EA222A421780077E653 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		900C0EAC22A427E80077E653 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EAB22A427E80077E653 /* ChartsViewController.swift */; };
 		900C0EB422A46EFF0077E653 /* ChartValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */; };
+		900C0EBA22C2F7D90077E653 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EB922C2F7D80077E653 /* PieChartViewController.swift */; };
+		900C0EC422C2FA310077E653 /* YearSelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EC222C2FA310077E653 /* YearSelectorTableViewCell.swift */; };
 		90269F372296197C00A6EB6F /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */; };
 		90269F3C22961A1700A6EB6F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */; };
 		90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3F229778B300A6EB6F /* MADCalendar.swift */; };
@@ -113,6 +115,8 @@
 		900C0E9C22A421780077E653 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Github Downloads/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		900C0EAB22A427E80077E653 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueFormatter.swift; sourceTree = "<group>"; };
+		900C0EB922C2F7D80077E653 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		900C0EC222C2FA310077E653 /* YearSelectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSelectorTableViewCell.swift; sourceTree = "<group>"; };
 		90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		90269F3F229778B300A6EB6F /* MADCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendar.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				900C0EAB22A427E80077E653 /* ChartsViewController.swift */,
+				900C0EB922C2F7D80077E653 /* PieChartViewController.swift */,
+				900C0EC222C2FA310077E653 /* YearSelectorTableViewCell.swift */,
 			);
 			path = "Charts Tab";
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				90F61CB02276382000BE47A4 /* HeadacheTableViewCell.swift in Sources */,
 				900060FC226D447A0022B686 /* AppDelegate.swift in Sources */,
 				90F61CBB2277D15600BE47A4 /* Medication+CoreDataClass.swift in Sources */,
+				900C0EBA22C2F7D90077E653 /* PieChartViewController.swift in Sources */,
 				90F61CB222763A3700BE47A4 /* HeadacheDetailTableViewController.swift in Sources */,
 				908FA6962291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift in Sources */,
 				90F61CAC2276167C00BE47A4 /* Headache+CoreDataClass.swift in Sources */,
@@ -486,6 +493,7 @@
 				90F61CBE2277D15600BE47A4 /* Dose+CoreDataProperties.swift in Sources */,
 				908FA6982292253B00A80E72 /* SettingsTableViewController.swift in Sources */,
 				90F61CB622767FE200BE47A4 /* MedicationTableViewController.swift in Sources */,
+				900C0EC422C2FA310077E653 /* YearSelectorTableViewCell.swift in Sources */,
 				9000612C226D493C0022B686 /* CoreDataStack.swift in Sources */,
 				908FA69A2294D02400A80E72 /* Utilities.swift in Sources */,
 				90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */,

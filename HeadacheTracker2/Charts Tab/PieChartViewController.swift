@@ -1,22 +1,20 @@
 //
-//  ChartsViewController.swift
+//  PieChartViewController.swift
 //  HeadacheTracker2
 //
-//  Created by Morgan Davison on 6/2/19.
+//  Created by Morgan Davison on 6/25/19.
 //  Copyright © 2019 Morgan Davison. All rights reserved.
 //
 
 import UIKit
-import CoreData
 import Charts
 
-class ChartsViewController: UIViewController {
+class PieChartViewController: UIViewController {
 
-    @IBOutlet weak var barChartView: BarChartView!
-    @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var yearSelectionView: UIView!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var yearStepper: UIStepper!
+    @IBOutlet weak var pieChartView: PieChartView!
     
     var coreDataStack: CoreDataStack!
     
@@ -29,7 +27,7 @@ class ChartsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let border = CALayer()
         let borderColor = UIColor(red: 214/255.0, green: 214/255.0, blue: 214/255.0, alpha: 1).cgColor
         border.backgroundColor = borderColor
@@ -38,7 +36,7 @@ class ChartsViewController: UIViewController {
         
         yearLabel.text = "\(currentYear)"
         yearStepper.value = Double(currentYear)
-
+        
         setChart(for: currentYear)
     }
     
@@ -51,24 +49,12 @@ class ChartsViewController: UIViewController {
         setChart(for: year)
     }
     
+
     
     // MARK: - Helpers
     
     private func setChart(for year: Int) {
-        barChartView.data = Headache.getBarChartData(for: year, coreDataStack: coreDataStack)
-        barChartView.chartDescription?.text = "Total headaches by month"
-        
-        let xAxis = barChartView.xAxis
-        xAxis.labelPosition = .top
-        xAxis.granularity = 1
-        xAxis.drawGridLinesEnabled = false
-        xAxis.valueFormatter = MonthAxisValueFormatter(chart: barChartView)
-        
-        barChartView.leftAxis.valueFormatter = HeadachesAxisValueFormatter(chart: barChartView)
-        barChartView.rightAxis.valueFormatter = HeadachesAxisValueFormatter(chart: barChartView)
-        
-        barChartView.leftAxis.granularity = 1
-        barChartView.rightAxis.granularity = 1
+        pieChartView.noDataText = NSLocalizedString("There is no data for that year.", comment: "")
+        pieChartView.data = Headache.getPieChartData(for: year, coreDataStack: coreDataStack)
     }
-    
 }

@@ -32,11 +32,11 @@ public class Headache: NSManagedObject {
         get {
             let severityInt = Int(severity)
             switch severityInt {
-            case 1: return UIColor.init(red: 212.0/255.0, green: 251.0/255.0, blue: 121.0/255.0, alpha: 1.0)
-            case 2: return UIColor.init(red: 237.0/255.0, green: 252.0/255.0, blue: 121.0/255.0, alpha: 1.0)
-            case 3: return UIColor.init(red: 255.0/255.0, green: 252.0/255.0, blue: 121.0/255.0, alpha: 1.0)
-            case 4: return UIColor.init(red: 255.0/255.0, green: 173.0/255.0, blue: 121.0/255.0, alpha: 1.0)
-            case 5: return UIColor.init(red: 255.0/255.0, green: 126.0/255.0, blue: 121.0/255.0, alpha: 1.0)
+            case 1: return UIColor(named: "Severity1")!
+            case 2: return UIColor(named: "Severity2")!
+            case 3: return UIColor(named: "Severity3")!
+            case 4: return UIColor(named: "Severity4")!
+            case 5: return UIColor(named: "Severity5")!
             default: return .black
             }
         }
@@ -103,11 +103,7 @@ public class Headache: NSManagedObject {
     
     class func getBarChartData(for year: Int, coreDataStack: CoreDataStack) -> BarChartData? {
         let calendar = Calendar.current
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy"
-        guard let startDate = dateFormatter.date(from: "\(year)") else { return nil }
-        let endDateString = "\(year + 1)"
-        guard let endDate = dateFormatter.date(from: endDateString) else { return nil }
+        guard let (startDate, endDate) = Headache.getDates(for: year) else { return nil }
         
         guard let headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack) else {
             return nil
@@ -145,6 +141,63 @@ public class Headache: NSManagedObject {
         let chartData = BarChartData(dataSets: [chartDataSet])
         
         return chartData
+    }
+    
+    class func getPieChartData(for year: Int, coreDataStack: CoreDataStack) -> PieChartData? {
+        guard let (startDate, endDate) = Headache.getDates(for: year) else { return nil }
+        
+        guard
+            let headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack)
+            else { return nil }
+        
+        var headachesPerSeverity = [
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0
+        ]
+        
+        for headache in headaches {
+            if let numHeadaches = headachesPerSeverity[Int(headache.severity)] {
+                headachesPerSeverity[Int(headache.severity)] = numHeadaches + 1
+            }
+        }
+        
+        var dataEntries: [PieChartDataEntry] = []
+        var colors = [UIColor]()
+        
+        // Create the data entries in asc order by severity
+        for i in 1...5 {
+            for (severity, num) in headachesPerSeverity {
+                if severity == i && num > 0 {
+                    colors.append(UIColor(named: "Severity\(severity)")!)
+                    let dataEntry = PieChartDataEntry(value: Double(num), data: severity)
+                    dataEntries.append(dataEntry)
+                }
+            }
+        }
+        
+        let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Severity")
+        chartDataSet.colors = colors
+        chartDataSet.valueTextColor = NSUIColor.darkGray
+        
+        let chartData = PieChartData(dataSets: [chartDataSet])
+        
+        return chartData
+    }
+    
+    class func getDates(for year: Int) -> (Date, Date)? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        
+        guard
+            let startDate = dateFormatter.date(from: "\(year)"),
+            let endDate = dateFormatter.date(from: "\(year + 1)") else {
+                return nil
+        }
+        
+        return (startDate, endDate)
     }
     
     

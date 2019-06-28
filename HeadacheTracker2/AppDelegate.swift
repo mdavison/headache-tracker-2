@@ -31,7 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let chartsNav = tabBarController.viewControllers?[2] as? UINavigationController,
             let chartsViewController = chartsNav.viewControllers[0] as? ChartsViewController,
             
-            let settingsNav = tabBarController.viewControllers?[3] as? UINavigationController,
+            let pieChartNav = tabBarController.viewControllers?[3] as? UINavigationController,
+            let pieChartViewController = pieChartNav.viewControllers[0] as? PieChartViewController,
+            
+            let settingsNav = tabBarController.viewControllers?[4] as? UINavigationController,
             let settingsViewController = settingsNav.viewControllers[0] as? SettingsTableViewController
         else {
             os_log("App Delegate: Could not initialize all the view controllers", type: .error)
@@ -41,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         headacheViewController.coreDataStack = coreDataStack
         calendarViewController.coreDataStack = coreDataStack
         chartsViewController.coreDataStack = coreDataStack
+        pieChartViewController.coreDataStack = coreDataStack
         settingsViewController.coreDataStack = coreDataStack
         
         return true
