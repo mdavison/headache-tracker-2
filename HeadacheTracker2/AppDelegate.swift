@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let calendarViewController = calendarNav.viewControllers[0] as? CalendarCollectionViewController,
             
             let chartsNav = tabBarController.viewControllers?[2] as? UINavigationController,
-            let chartsViewController = chartsNav.viewControllers[0] as? ChartsViewController,
+            let chartsViewController = chartsNav.viewControllers[0] as? BarChartViewController,
             
             let pieChartNav = tabBarController.viewControllers?[3] as? UINavigationController,
             let pieChartViewController = pieChartNav.viewControllers[0] as? PieChartViewController,

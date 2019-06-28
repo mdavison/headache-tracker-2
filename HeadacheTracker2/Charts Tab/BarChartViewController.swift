@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Charts
 
-class ChartsViewController: UIViewController {
+class BarChartViewController: UIViewController {
 
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var pieChartView: PieChartView!

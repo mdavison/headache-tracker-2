@@ -746,10 +746,10 @@
             </objects>
             <point key="canvasLocation" x="4953.6231884057979" y="-386.38392857142856"/>
         </scene>
-        <!--Charts View Controller-->
+        <!--Bar Chart View Controller-->
         <scene sceneID="QfJ-KK-J5K">
             <objects>
-                <viewController id="RFu-rE-geC" customClass="ChartsViewController" customModule="HeadacheTracker2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RFu-rE-geC" customClass="BarChartViewController" customModule="HeadacheTracker2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4a6-Lv-Rsi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -919,11 +919,11 @@
             </objects>
             <point key="canvasLocation" x="824.63768115942037" y="300"/>
         </scene>
-        <!--Charts-->
+        <!--Bar Chart-->
         <scene sceneID="1Ct-rJ-VEh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m3Z-YH-Ek5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Charts" id="qLQ-k3-rmE"/>
+                    <tabBarItem key="tabBarItem" title="Bar Chart" id="qLQ-k3-rmE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cte-ds-Ukd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

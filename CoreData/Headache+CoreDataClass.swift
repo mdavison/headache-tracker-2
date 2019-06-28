@@ -32,11 +32,11 @@ public class Headache: NSManagedObject {
         get {
             let severityInt = Int(severity)
             switch severityInt {
-            case 1: return UIColor(named: "Severity1")!
-            case 2: return UIColor(named: "Severity2")!
-            case 3: return UIColor(named: "Severity3")!
-            case 4: return UIColor(named: "Severity4")!
-            case 5: return UIColor(named: "Severity5")!
+            case 1: return UIColor(named: "Severity1") ?? .white
+            case 2: return UIColor(named: "Severity2") ?? .white
+            case 3: return UIColor(named: "Severity3") ?? .white
+            case 4: return UIColor(named: "Severity4") ?? .white
+            case 5: return UIColor(named: "Severity5") ?? .white
             default: return .black
             }
         }
