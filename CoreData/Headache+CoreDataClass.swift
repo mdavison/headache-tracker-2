@@ -178,7 +178,7 @@ public class Headache: NSManagedObject {
             }
         }
         
-        let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Severity")
+        let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Headaches by Severity")
         chartDataSet.colors = colors
         chartDataSet.valueTextColor = NSUIColor.darkGray
         

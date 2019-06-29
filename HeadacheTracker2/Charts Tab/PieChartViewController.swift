@@ -17,11 +17,15 @@ class PieChartViewController: UIViewController {
     @IBOutlet weak var pieChartView: PieChartView!
     
     var coreDataStack: CoreDataStack!
+    var selectedYear: Int?
     
     var currentYear: Int {
         get {
             let calendar = Calendar.current
-            return calendar.component(.year, from: Date())
+            let year = calendar.component(.year, from: Date())
+            selectedYear = year
+            
+            return year
         }
     }
     
@@ -38,6 +42,13 @@ class PieChartViewController: UIViewController {
         yearStepper.value = Double(currentYear)
         
         setChart(for: currentYear)
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(managedObjectContextObjectsDidChange),
+            name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
+            object: coreDataStack.managedContext)
     }
     
     
@@ -45,9 +56,22 @@ class PieChartViewController: UIViewController {
     
     @IBAction func yearChanged(_ sender: UIStepper) {
         let year = Int(sender.value)
+        selectedYear = year
         yearLabel.text = "\(year)"
         setChart(for: year)
     }
+    
+    
+    // MARK: - Notifications
+    
+    @objc func managedObjectContextObjectsDidChange(notification: NSNotification) {
+        if let year = selectedYear {
+            setChart(for: year)
+        } else {
+            setChart(for: currentYear)
+        }
+    }
+    
     
 
     
