@@ -11,7 +11,7 @@ import CoreData
 
 class CoreDataStack {
     
-    private let modelName: String
+    let modelName: String
     
     init(modelName: String) {
         self.modelName = modelName
@@ -39,6 +39,11 @@ class CoreDataStack {
     }
     
     lazy var managedContext: NSManagedObjectContext = {
-        return self.storeContainer.viewContext
+        // Use a function call so it can be overridden in the unit test
+        return getManagedContext()
     }()
+    
+    func getManagedContext() -> NSManagedObjectContext {
+        return self.storeContainer.viewContext
+    }
 }

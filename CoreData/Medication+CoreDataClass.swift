@@ -58,9 +58,7 @@ public class Medication: NSManagedObject {
         return medication 
     }
     
-    
-    // MARK: - Helper Methods
-    
+        
     class func validate(name: String, with medications: [Medication]?, against medication: Medication?) -> String? {
         // Can't be blank
         let trimmedName = name.trimmingCharacters(in: CharacterSet.whitespaces)

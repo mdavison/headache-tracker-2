@@ -19,6 +19,8 @@
 		900C0EAC22A427E80077E653 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EAB22A427E80077E653 /* BarChartViewController.swift */; };
 		900C0EB422A46EFF0077E653 /* ChartValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */; };
 		900C0EBA22C2F7D90077E653 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0EB922C2F7D80077E653 /* PieChartViewController.swift */; };
+		900C0ECF22CAEA250077E653 /* Medication+CoreDataClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0ECE22CAEA250077E653 /* Medication+CoreDataClassTests.swift */; };
+		900C0ED222CD6E9B0077E653 /* MADCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C0ED122CD6E9B0077E653 /* MADCalendarTests.swift */; };
 		90269F372296197C00A6EB6F /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */; };
 		90269F3C22961A1700A6EB6F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */; };
 		90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3F229778B300A6EB6F /* MADCalendar.swift */; };
@@ -115,6 +117,8 @@
 		900C0EAB22A427E80077E653 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueFormatter.swift; sourceTree = "<group>"; };
 		900C0EB922C2F7D80077E653 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		900C0ECE22CAEA250077E653 /* Medication+CoreDataClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataClassTests.swift"; sourceTree = "<group>"; };
+		900C0ED122CD6E9B0077E653 /* MADCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendarTests.swift; sourceTree = "<group>"; };
 		90269F362296197C00A6EB6F /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		90269F3F229778B300A6EB6F /* MADCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendar.swift; sourceTree = "<group>"; };
@@ -210,8 +214,9 @@
 		90006111226D447B0022B686 /* HeadacheTracker2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				900C0ED022CD6E850077E653 /* Models */,
 				908FA68E228F4AE600A80E72 /* Mocks */,
-				908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */,
+				900C0ECC22C6EE810077E653 /* CoreData */,
 				90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */,
 				90006114226D447B0022B686 /* Info.plist */,
 			);
@@ -243,6 +248,23 @@
 				900C0EB922C2F7D80077E653 /* PieChartViewController.swift */,
 			);
 			path = "Charts Tab";
+			sourceTree = "<group>";
+		};
+		900C0ECC22C6EE810077E653 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */,
+				900C0ECE22CAEA250077E653 /* Medication+CoreDataClassTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		900C0ED022CD6E850077E653 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				900C0ED122CD6E9B0077E653 /* MADCalendarTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		90269F382296198900A6EB6F /* Headache Tab */ = {
@@ -503,6 +525,8 @@
 			files = (
 				908FA68D228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift in Sources */,
 				908FA690228F4B1C00A80E72 /* MockCoreDataStack.swift in Sources */,
+				900C0ED222CD6E9B0077E653 /* MADCalendarTests.swift in Sources */,
+				900C0ECF22CAEA250077E653 /* Medication+CoreDataClassTests.swift in Sources */,
 				90006113226D447B0022B686 /* HeadacheTracker2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

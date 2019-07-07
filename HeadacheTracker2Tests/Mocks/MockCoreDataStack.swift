@@ -11,36 +11,34 @@ import CoreData
 @testable import HeadacheTracker2
 
 class TestCoreDataStack: CoreDataStack {
-//    private let modelName: String
-//
-//    override init(modelName: String) {
-//        super.init(modelName: modelName)
-//
-//        self.modelName = modelName
-//    }
     
-//    private lazy var storeContainer: NSPersistentContainer = {
-//        let container = NSPersistentContainer(name: self.modelName)
-//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-//            if let error = error as NSError? {
-//                print("Unresolved error \(error), \(error.userInfo)")
-//            }
-//        })
-//
-//        return container
-//    }()
+    var managedObjectModel: NSManagedObjectModel = {
+        let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main])!
+        
+        return managedObjectModel
+    }()
     
-//    func saveContext() {
-//        guard managedContext.hasChanges else { return }
-//
-//        do {
-//            try managedContext.save()
-//        } catch let error as NSError {
-//            print("Unresolved error \(error), \(error.userInfo)")
-//        }
-//    }
+    private lazy var storeContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: self.modelName, managedObjectModel: self.managedObjectModel)
+        let description = NSPersistentStoreDescription()
+        description.type = NSInMemoryStoreType
+        description.shouldAddStoreAsynchronously = false
+        
+        container.persistentStoreDescriptions = [description]
+        container.loadPersistentStores(completionHandler: { (description, error) in
+            // Check if the data store is in memory
+            precondition(description.type == NSInMemoryStoreType)
+            
+            // Check if creating container wrong
+            if let error = error {
+                fatalError("In-memory coordinator creation failed. \(error)")
+            }
+        })
+        return container
+    }()
     
-//    lazy var managedContext: NSManagedObjectContext = {
-//        return self.storeContainer.viewContext
-//    }()
+    override func getManagedContext() -> NSManagedObjectContext {
+        return self.storeContainer.viewContext
+    }
+    
 }
