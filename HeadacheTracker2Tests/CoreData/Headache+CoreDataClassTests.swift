@@ -103,6 +103,8 @@ class HeadacheTests: XCTestCase {
             Headache(context: coreDataStack.managedContext)
         ]
         
+        coreDataStack.saveContext()
+        
         let headaches = Headache.getAll(coreDataStack: coreDataStack)
         
         XCTAssertEqual(headaches?.count, 3)

@@ -46,7 +46,9 @@ class HeadacheTableViewController: UITableViewController {
         }
         
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 85        
+        tableView.estimatedRowHeight = 85
+        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
     

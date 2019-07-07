@@ -102,6 +102,7 @@ extension MedicationTableViewController {
         
         let medication = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = medication.name
+        cell.detailTextLabel?.text = medication.desc
         
         return cell
     }

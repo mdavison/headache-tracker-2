@@ -11,7 +11,6 @@
 		90006103226D447A0022B686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90006101226D447A0022B686 /* Main.storyboard */; };
 		90006105226D447B0022B686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90006104226D447B0022B686 /* Assets.xcassets */; };
 		90006108226D447B0022B686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90006106226D447B0022B686 /* LaunchScreen.storyboard */; };
-		9000611E226D447B0022B686 /* HeadacheTracker2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */; };
 		9000612C226D493C0022B686 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000612B226D493C0022B686 /* CoreDataStack.swift */; };
 		900C0EA522A422150077E653 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900C0EA222A421780077E653 /* Charts.framework */; };
 		900C0EA622A422150077E653 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 900C0EA222A421780077E653 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,6 +30,7 @@
 		908FA6962291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6952291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift */; };
 		908FA6982292253B00A80E72 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6972292253B00A80E72 /* SettingsTableViewController.swift */; };
 		908FA69A2294D02400A80E72 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA6992294D02400A80E72 /* Utilities.swift */; };
+		909EB10022D2886100B70A29 /* MedicationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB0FF22D2886100B70A29 /* MedicationsTests.swift */; };
 		90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */; };
 		90F61CA42276148500BE47A4 /* HeadacheTracker2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA22276148500BE47A4 /* HeadacheTracker2.xcdatamodeld */; };
 		90F61CAC2276167C00BE47A4 /* Headache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */; };
@@ -108,7 +108,6 @@
 		9000610E226D447B0022B686 /* HeadacheTracker2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90006114226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2UITests.swift; sourceTree = "<group>"; };
 		9000611F226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9000612B226D493C0022B686 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		900C0E9C22A421780077E653 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Github Downloads/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		908FA6952291C9E700A80E72 /* HeadacheMedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheMedicationTableViewCell.swift; sourceTree = "<group>"; };
 		908FA6972292253B00A80E72 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		908FA6992294D02400A80E72 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		909EB0FF22D2886100B70A29 /* MedicationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationsTests.swift; sourceTree = "<group>"; };
 		90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTableViewController.swift; sourceTree = "<group>"; };
 		90F61CA32276148500BE47A4 /* HeadacheTracker2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadacheTracker2.xcdatamodel; sourceTree = "<group>"; };
 		90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		9000611C226D447B0022B686 /* HeadacheTracker2UITests */ = {
 			isa = PBXGroup;
 			children = (
-				9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */,
 				9000611F226D447B0022B686 /* Info.plist */,
+				909EB0FF22D2886100B70A29 /* MedicationsTests.swift */,
 			);
 			path = HeadacheTracker2UITests;
 			sourceTree = "<group>";
@@ -531,7 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9000611E226D447B0022B686 /* HeadacheTracker2UITests.swift in Sources */,
+				909EB10022D2886100B70A29 /* MedicationsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
