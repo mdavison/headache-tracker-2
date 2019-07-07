@@ -73,8 +73,6 @@ class PieChartViewController: UIViewController {
     }
     
     
-
-    
     // MARK: - Helpers
     
     private func setChart(for year: Int) {

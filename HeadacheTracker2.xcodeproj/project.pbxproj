@@ -11,7 +11,6 @@
 		90006103226D447A0022B686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90006101226D447A0022B686 /* Main.storyboard */; };
 		90006105226D447B0022B686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90006104226D447B0022B686 /* Assets.xcassets */; };
 		90006108226D447B0022B686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90006106226D447B0022B686 /* LaunchScreen.storyboard */; };
-		90006113226D447B0022B686 /* HeadacheTracker2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */; };
 		9000611E226D447B0022B686 /* HeadacheTracker2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */; };
 		9000612C226D493C0022B686 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000612B226D493C0022B686 /* CoreDataStack.swift */; };
 		900C0EA522A422150077E653 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900C0EA222A421780077E653 /* Charts.framework */; };
@@ -107,7 +106,6 @@
 		90006107226D447B0022B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90006109226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9000610E226D447B0022B686 /* HeadacheTracker2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2Tests.swift; sourceTree = "<group>"; };
 		90006114226D447B0022B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9000611D226D447B0022B686 /* HeadacheTracker2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2UITests.swift; sourceTree = "<group>"; };
@@ -217,7 +215,6 @@
 				900C0ED022CD6E850077E653 /* Models */,
 				908FA68E228F4AE600A80E72 /* Mocks */,
 				900C0ECC22C6EE810077E653 /* CoreData */,
-				90006112226D447B0022B686 /* HeadacheTracker2Tests.swift */,
 				90006114226D447B0022B686 /* Info.plist */,
 			);
 			path = HeadacheTracker2Tests;
@@ -527,7 +524,6 @@
 				908FA690228F4B1C00A80E72 /* MockCoreDataStack.swift in Sources */,
 				900C0ED222CD6E9B0077E653 /* MADCalendarTests.swift in Sources */,
 				900C0ECF22CAEA250077E653 /* Medication+CoreDataClassTests.swift in Sources */,
-				90006113226D447B0022B686 /* HeadacheTracker2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
