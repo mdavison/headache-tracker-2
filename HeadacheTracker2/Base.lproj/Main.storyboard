@@ -124,6 +124,7 @@
                                     <subviews>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-OS-7Q9">
                                             <rect key="frame" x="18" y="43" width="378" height="31"/>
+                                            <accessibility key="accessibilityConfiguration" hint="Severity of headache on a scale of 1 to 5" identifier="severitySlider" label="Severity"/>
                                             <connections>
                                                 <action selector="severityChanged:" destination="hHq-NU-81y" eventType="valueChanged" id="NVk-0R-rea"/>
                                             </connections>
@@ -979,7 +980,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kHg-Hv-cq6"/>
-        <segue reference="ZeV-kQ-mDF"/>
+        <segue reference="Yah-zO-9bm"/>
         <segue reference="pIH-V0-wjW"/>
     </inferredMetricsTieBreakers>
 </document>

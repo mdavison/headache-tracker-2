@@ -34,9 +34,9 @@ class MedicationsTests: XCTestCase {
         
         // Insert a test medication
         let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.buttons["Manage Medications"]/*[[".cells.buttons[\"Manage Medications\"]",".buttons[\"Manage Medications\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.buttons["Manage Medications"].tap()
         app.navigationBars["Medications"].buttons["Add"].tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.textFields["Ibuprofen"]/*[[".cells.textFields[\"Ibuprofen\"]",".textFields[\"Ibuprofen\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.textFields["Ibuprofen"].tap()
         tablesQuery.textFields.firstMatch.typeText("Test Medication")
         
         let descTextField = tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element

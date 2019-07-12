@@ -31,6 +31,13 @@ class CalendarCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
         
         madCalendar = MADCalendar(coreDataStack: coreDataStack)
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(managedObjectContextObjectsDidChange),
+            name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
+            object: coreDataStack.managedContext)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -52,6 +59,13 @@ class CalendarCollectionViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // MARK: - Notifications
+    
+    @objc func managedObjectContextObjectsDidChange(notification: NSNotification) {
+        collectionView.reloadData()
+    }
 
     
 
