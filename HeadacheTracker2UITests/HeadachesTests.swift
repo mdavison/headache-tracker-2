@@ -11,6 +11,7 @@ import XCTest
 class HeadachesTests: XCTestCase {
 
     let app = XCUIApplication()
+    var today: String?
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,23 +21,21 @@ class HeadachesTests: XCTestCase {
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        today = dateFormatter.string(from: Date())
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        today = nil
     }
     
     func testAddHeadache() {
         app.navigationBars["Headaches"].buttons["Add"].tap()
         app.navigationBars["New Headache"].buttons["Done"].tap()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let today = dateFormatter.string(from: Date())
-        
-        let newHeadache = app.tables.staticTexts[today]
+        let newHeadache = app.tables.staticTexts[today!]
         
         XCTAssert(newHeadache.exists)
         
@@ -48,11 +47,7 @@ class HeadachesTests: XCTestCase {
         app.navigationBars["Headaches"].buttons["Add"].tap()
         app.navigationBars["New Headache"].buttons["Done"].tap()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let today = dateFormatter.string(from: Date())
-        
-        let newHeadache = app.tables.staticTexts[today].firstMatch
+        let newHeadache = app.tables.staticTexts[today!].firstMatch
         
         newHeadache.tap()
         
@@ -99,11 +94,7 @@ class HeadachesTests: XCTestCase {
         
         app.navigationBars["New Headache"].buttons["Done"].tap()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let today = dateFormatter.string(from: Date())
-        
-        let newHeadache = app.tables.staticTexts[today]
+        let newHeadache = app.tables.staticTexts[today!]
         
         // Assert new headache with new medication shows up in headache list
         XCTAssert(newHeadache.exists)
@@ -119,5 +110,65 @@ class HeadachesTests: XCTestCase {
         tablesQuery.staticTexts["Test Medication"].swipeLeft()
         tablesQuery.buttons["Delete"].tap()
     }
-
+    
+    func testUpdateMedicationNameShowsInTable() {
+        // Add a new headache
+        app.navigationBars["Headaches"].buttons["Add"].tap()
+        
+        // Add a new medication
+        let tablesQuery = app.tables
+        app.tables.containing(.other, identifier:"DATE").element.swipeUp()
+        tablesQuery.buttons["Manage Medications"].tap()
+        app.navigationBars["Medications"].buttons["Add"].tap()
+        tablesQuery.textFields["Ibuprofen"].tap()
+        tablesQuery.textFields.firstMatch.typeText("Test Medication")
+        
+        let descTextField = tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element
+        descTextField.tap()
+        descTextField.typeText("20 mg tablet")
+        
+        app.navigationBars["New Medication"].buttons["Done"].tap()
+        app.navigationBars["Medications"].buttons["Done"].tap()
+        
+        // Add a dose
+        tablesQuery.staticTexts["Test Medication"].tap()
+        
+        app.navigationBars["New Headache"].buttons["Done"].tap()
+        
+        let newHeadache = app.tables.staticTexts[today!]
+        
+        // Assert new headache with new medication shows up in headache list
+        XCTAssert(newHeadache.exists)
+        XCTAssert(app.tables.staticTexts["1 Test Medication"].exists)
+        
+        // Navigate to the Settings tab
+        app.tabBars.children(matching: .button).element(boundBy: 4).tap()
+        
+        // Update name of Test Medication
+        app.tables.buttons["Manage Medications"].tap()
+        app.tables.cells.staticTexts["Test Medication"].tap()
+        
+        app.tables.cells.textFields.firstMatch.tap()
+        app.tables.cells.textFields.firstMatch.typeText(" Edited")
+        
+        app.navigationBars["Edit Test Medication"].buttons["Done"].tap()
+        app.navigationBars["Medications"].buttons["Done"].tap()
+        
+        // Navigate to headache tab
+        app.tabBars.children(matching: .button).element(boundBy: 0).tap()
+        
+        // Assert the medication name has updated
+        XCTAssert(app.tables.staticTexts["1 Test Medication Edited"].exists)
+        
+        // Delete the test headache
+        newHeadache.swipeLeft()
+        app.buttons["Delete"].tap()
+        
+        // Delete the test medication
+        app.tabBars.children(matching: .button).element(boundBy: 4).tap()
+        tablesQuery.buttons["Manage Medications"].tap()
+        tablesQuery.staticTexts["Test Medication Edited"].swipeLeft()
+        tablesQuery.buttons["Delete"].tap()
+    }
+   
 }

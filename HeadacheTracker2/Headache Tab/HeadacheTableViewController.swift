@@ -49,6 +49,13 @@ class HeadacheTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 85
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(managedObjectContextObjectsDidChange),
+            name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
+            object: coreDataStack.managedContext)
     }
 
     
@@ -74,6 +81,13 @@ class HeadacheTableViewController: UITableViewController {
     // MARK: - Actions
     
     @IBAction func cancel(_ unwindSegue: UIStoryboardSegue) {}
+    
+    
+    // MARK: - Notifications
+    
+    @objc func managedObjectContextObjectsDidChange(notification: NSNotification) {
+        tableView.reloadData()
+    }
     
     
     // MARK: - Helper Methods
