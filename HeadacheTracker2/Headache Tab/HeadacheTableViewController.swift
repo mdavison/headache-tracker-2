@@ -50,6 +50,8 @@ class HeadacheTableViewController: UITableViewController {
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
+        
+        // Set up notification observer
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(
             self,

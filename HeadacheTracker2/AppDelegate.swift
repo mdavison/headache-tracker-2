@@ -46,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         chartsViewController.coreDataStack = coreDataStack
         pieChartViewController.coreDataStack = coreDataStack
         settingsViewController.coreDataStack = coreDataStack
+                
+        // Set global tint color
+        window?.tintColor = UIColor(named: "Tint")
         
         return true
     }
