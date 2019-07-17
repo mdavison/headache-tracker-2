@@ -33,6 +33,7 @@
 		909EB10022D2886100B70A29 /* MedicationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB0FF22D2886100B70A29 /* MedicationsTests.swift */; };
 		909EB10322D424B700B70A29 /* HeadachesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB10222D424B700B70A29 /* HeadachesTests.swift */; };
 		909EB10522D6BC8500B70A29 /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB10422D6BC8500B70A29 /* CalendarTests.swift */; };
+		909EB11322DEAAF000B70A29 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909EB11222DEAAF000B70A29 /* CloudKit.framework */; };
 		90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */; };
 		90F61CA42276148500BE47A4 /* HeadacheTracker2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA22276148500BE47A4 /* HeadacheTracker2.xcdatamodeld */; };
 		90F61CAC2276167C00BE47A4 /* Headache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */; };
@@ -132,6 +133,8 @@
 		909EB0FF22D2886100B70A29 /* MedicationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationsTests.swift; sourceTree = "<group>"; };
 		909EB10222D424B700B70A29 /* HeadachesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadachesTests.swift; sourceTree = "<group>"; };
 		909EB10422D6BC8500B70A29 /* CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTests.swift; sourceTree = "<group>"; };
+		909EB10E22DEA5F400B70A29 /* HeadacheTracker2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeadacheTracker2.entitlements; sourceTree = "<group>"; };
+		909EB11222DEAAF000B70A29 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTableViewController.swift; sourceTree = "<group>"; };
 		90F61CA32276148500BE47A4 /* HeadacheTracker2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadacheTracker2.xcdatamodel; sourceTree = "<group>"; };
 		90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				900C0EA522A422150077E653 /* Charts.framework in Frameworks */,
+				909EB11322DEAAF000B70A29 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,7 @@
 				90006111226D447B0022B686 /* HeadacheTracker2Tests */,
 				9000611C226D447B0022B686 /* HeadacheTracker2UITests */,
 				900060F9226D447A0022B686 /* Products */,
+				909EB10F22DEA5F700B70A29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +203,7 @@
 		900060FA226D447A0022B686 /* HeadacheTracker2 */ = {
 			isa = PBXGroup;
 			children = (
+				909EB10E22DEA5F400B70A29 /* HeadacheTracker2.entitlements */,
 				900060FB226D447A0022B686 /* AppDelegate.swift */,
 				90269F382296198900A6EB6F /* Headache Tab */,
 				90269F392296199300A6EB6F /* Calendar Tab */,
@@ -321,6 +327,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		909EB10F22DEA5F700B70A29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				909EB11222DEAAF000B70A29 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90F61CAE2276168700BE47A4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +420,17 @@
 				TargetAttributes = {
 					900060F7226D447A0022B686 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					9000610D226D447B0022B686 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -704,14 +729,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeadacheTracker2/HeadacheTracker2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTDN7L2Y29;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
 				INFOPLIST_FILE = HeadacheTracker2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.Headaches2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -723,14 +749,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeadacheTracker2/HeadacheTracker2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTDN7L2Y29;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
 				INFOPLIST_FILE = HeadacheTracker2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.Headaches2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
