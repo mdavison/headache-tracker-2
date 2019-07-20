@@ -754,7 +754,7 @@
             </objects>
             <point key="canvasLocation" x="4953.6231884057979" y="-386.38392857142856"/>
         </scene>
-        <!--Bar Chart View Controller-->
+        <!--Number of Headaches-->
         <scene sceneID="QfJ-KK-J5K">
             <objects>
                 <viewController id="RFu-rE-geC" customClass="BarChartViewController" customModule="HeadacheTracker2" customModuleProvider="target" sceneMemberID="viewController">
@@ -810,9 +810,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="03E-WC-Xes"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GJX-aD-5xK">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Number of Headaches" id="GJX-aD-5xK"/>
                     <connections>
                         <outlet property="barChartView" destination="eKR-df-fUe" id="mKn-R7-Uvl"/>
                         <outlet property="pieChartView" destination="srg-s4-9cr" id="KhY-mp-931"/>
@@ -825,7 +823,7 @@
             </objects>
             <point key="canvasLocation" x="1527.536231884058" y="1048.6607142857142"/>
         </scene>
-        <!--Pie Chart View Controller-->
+        <!--Severity of Headaches-->
         <scene sceneID="tck-hk-2AV">
             <objects>
                 <viewController id="XE7-i6-VJD" customClass="PieChartViewController" customModule="HeadacheTracker2" customModuleProvider="target" sceneMemberID="viewController">
@@ -873,7 +871,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hDF-GB-7M2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BOX-7V-2ga"/>
+                    <navigationItem key="navigationItem" title="Severity of Headaches" id="BOX-7V-2ga"/>
                     <connections>
                         <outlet property="intervalSegmentedControl" destination="pLk-Cl-MT1" id="WDc-1t-DLT"/>
                         <outlet property="intervalSelectionView" destination="bp8-eb-FNn" id="T0z-Fw-I9O"/>
