@@ -138,6 +138,9 @@ public class Headache: NSManagedObject {
         }
         
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Number of Headaches")
+        if let color = UIColor(named: "Tint") {
+            chartDataSet.setColor(color)
+        }
         let chartData = BarChartData(dataSets: [chartDataSet])
         
         return chartData
