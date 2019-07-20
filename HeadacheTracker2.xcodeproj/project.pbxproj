@@ -23,6 +23,7 @@
 		90269F3C22961A1700A6EB6F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */; };
 		90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3F229778B300A6EB6F /* MADCalendar.swift */; };
 		90269F422299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */; };
+		9064A70B22DFFD48007DBD4A /* ChartInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064A70A22DFFD48007DBD4A /* ChartInterval.swift */; };
 		908FA68D228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */; };
 		908FA690228F4B1C00A80E72 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */; };
 		908FA69222909D6000A80E72 /* SeverityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */; };
@@ -123,6 +124,7 @@
 		90269F3B22961A1700A6EB6F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		90269F3F229778B300A6EB6F /* MADCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendar.swift; sourceTree = "<group>"; };
 		90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionReusableHeaderView.swift; sourceTree = "<group>"; };
+		9064A70A22DFFD48007DBD4A /* ChartInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInterval.swift; sourceTree = "<group>"; };
 		908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClassTests.swift"; sourceTree = "<group>"; };
 		908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
 		908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityTableViewCell.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			children = (
 				90269F3F229778B300A6EB6F /* MADCalendar.swift */,
 				900C0EB322A46EFF0077E653 /* ChartValueFormatter.swift */,
+				9064A70A22DFFD48007DBD4A /* ChartInterval.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				90F61CBC2277D15600BE47A4 /* Medication+CoreDataProperties.swift in Sources */,
 				900C0EB422A46EFF0077E653 /* ChartValueFormatter.swift in Sources */,
 				90269F422299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift in Sources */,
+				9064A70B22DFFD48007DBD4A /* ChartInterval.swift in Sources */,
 				90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */,
 				90F61CBD2277D15600BE47A4 /* Dose+CoreDataClass.swift in Sources */,
 				90F61CA42276148500BE47A4 /* HeadacheTracker2.xcdatamodeld in Sources */,

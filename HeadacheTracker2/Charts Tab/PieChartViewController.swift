@@ -11,23 +11,12 @@ import Charts
 
 class PieChartViewController: UIViewController {
 
-    @IBOutlet weak var yearSelectionView: UIView!
-    @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var yearStepper: UIStepper!
+    @IBOutlet weak var intervalSelectionView: UIView!
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var intervalSegmentedControl: UISegmentedControl!
     
     var coreDataStack: CoreDataStack!
-    var selectedYear: Int?
-    
-    var currentYear: Int {
-        get {
-            let calendar = Calendar.current
-            let year = calendar.component(.year, from: Date())
-            selectedYear = year
-            
-            return year
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +24,10 @@ class PieChartViewController: UIViewController {
         let border = CALayer()
         let borderColor = UIColor(red: 214/255.0, green: 214/255.0, blue: 214/255.0, alpha: 1).cgColor
         border.backgroundColor = borderColor
-        border.frame = CGRect(x: 0, y: yearSelectionView.frame.size.height - 1, width: yearSelectionView.frame.size.width, height: 1)
-        yearSelectionView.layer.addSublayer(border)
+        border.frame = CGRect(x: 0, y: intervalSelectionView.frame.size.height - 1, width: intervalSelectionView.frame.size.width, height: 1)
+        intervalSelectionView.layer.addSublayer(border)
         
-        yearLabel.text = "\(currentYear)"
-        yearStepper.value = Double(currentYear)
-        
-        setChart(for: currentYear)
+        setChart(for: ChartInterval.year)
         
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(
@@ -54,29 +40,27 @@ class PieChartViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func yearChanged(_ sender: UIStepper) {
-        let year = Int(sender.value)
-        selectedYear = year
-        yearLabel.text = "\(year)"
-        setChart(for: year)
+    @IBAction func intervalChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: setChart(for: ChartInterval.week)
+        case 1: setChart(for: ChartInterval.month)
+        case 2: setChart(for: ChartInterval.year)
+        default: return
+        }
     }
     
     
     // MARK: - Notifications
     
     @objc func managedObjectContextObjectsDidChange(notification: NSNotification) {
-        if let year = selectedYear {
-            setChart(for: year)
-        } else {
-            setChart(for: currentYear)
-        }
+        setChart(for: ChartInterval.year)
     }
     
     
     // MARK: - Helpers
     
-    private func setChart(for year: Int) {
-        pieChartView.noDataText = NSLocalizedString("There is no data for that year.", comment: "")
-        pieChartView.data = Headache.getPieChartData(for: year, coreDataStack: coreDataStack)
+    private func setChart(for interval: ChartInterval) {
+        pieChartView.noDataText = NSLocalizedString("There is no data for selected time frame.", comment: "")
+        pieChartView.data = Headache.getPieChartData(for: interval, coreDataStack: coreDataStack)
     }
 }

@@ -187,6 +187,51 @@ public class Headache: NSManagedObject {
         return chartData
     }
     
+    class func getPieChartData(for interval: ChartInterval, coreDataStack: CoreDataStack) -> PieChartData? {
+        let numDays = interval.rawValue
+        guard let (startDate, endDate) = Headache.getDatesForLast(numDays: numDays) else { return nil }
+        
+        guard
+            let headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack)
+            else { return nil }
+        
+        var headachesPerSeverity = [
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0
+        ]
+        
+        for headache in headaches {
+            if let numHeadaches = headachesPerSeverity[Int(headache.severity)] {
+                headachesPerSeverity[Int(headache.severity)] = numHeadaches + 1
+            }
+        }
+        
+        var dataEntries: [PieChartDataEntry] = []
+        var colors = [UIColor]()
+        
+        // Create the data entries in asc order by severity
+        for i in 1...5 {
+            for (severity, num) in headachesPerSeverity {
+                if severity == i && num > 0 {
+                    colors.append(UIColor(named: "Severity\(severity)")!)
+                    let dataEntry = PieChartDataEntry(value: Double(num), data: severity)
+                    dataEntries.append(dataEntry)
+                }
+            }
+        }
+        
+        let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Headaches by Severity")
+        chartDataSet.colors = colors
+        chartDataSet.valueTextColor = NSUIColor.darkGray
+        
+        let chartData = PieChartData(dataSets: [chartDataSet])
+        
+        return chartData
+    }
+    
     class func getDates(for year: Int) -> (Date, Date)? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
@@ -196,6 +241,14 @@ public class Headache: NSManagedObject {
             let endDate = dateFormatter.date(from: "\(year + 1)") else {
                 return nil
         }
+        
+        return (startDate, endDate)
+    }
+    
+    
+    class func getDatesForLast(numDays: Int) -> (Date, Date)? {
+        let endDate = Date()
+        guard let startDate = Calendar.current.date(byAdding: .day, value: -numDays, to: endDate) else { return nil }
         
         return (startDate, endDate)
     }

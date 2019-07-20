@@ -306,6 +306,48 @@ class HeadacheTests: XCTestCase {
             XCTAssertEqual(qty, 2)
         }
     }
+    
+    func testGetDatesForLast() {
+        guard let coreDataStack = coreDataStack else {
+            XCTFail("Expected coreDataStack to be set")
+            return
+        }
+        
+        let today = Date()
+        let dates = [
+            today,
+            Calendar.current.date(byAdding: .day, value: -3, to: today),
+            Calendar.current.date(byAdding: .day, value: -7, to: today),
+            Calendar.current.date(byAdding: .day, value: -20, to: today),
+            Calendar.current.date(byAdding: .day, value: -30, to: today),
+            Calendar.current.date(byAdding: .day, value: -60, to: today),
+            Calendar.current.date(byAdding: .day, value: -365, to: today)
+        ]
+        
+        var headache: Headache
+        for date in dates {
+            headache = Headache(context: coreDataStack.managedContext)
+            headache.date = date!
+            headache.severity = 3
+            
+            coreDataStack.saveContext()
+        }
+        
+        var (startDate, endDate) = Headache.getDatesForLast(numDays: ChartInterval.week.rawValue)!
+        var headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack)
+        
+        XCTAssertEqual(headaches?.count, 2)
+        
+        (startDate, endDate) = Headache.getDatesForLast(numDays: ChartInterval.month.rawValue)!
+        headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack)
+        
+        XCTAssertEqual(headaches?.count, 4)
+        
+        (startDate, endDate) = Headache.getDatesForLast(numDays: ChartInterval.year.rawValue)!
+        headaches = Headache.getAll(startDate: startDate, endDate: endDate, coreDataStack: coreDataStack)
+        
+        XCTAssertEqual(headaches?.count, 6)
+    }
 
     
     // MARK: - Helper methods

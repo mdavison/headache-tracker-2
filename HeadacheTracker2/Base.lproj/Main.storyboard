@@ -836,28 +836,24 @@
                             <view contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bp8-eb-FNn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-a7-KC2">
-                                        <rect key="frame" x="20" y="12" width="272" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1900" minimumValue="1900" maximumValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="yRp-s4-F3s">
-                                        <rect key="frame" x="300" y="7.5" width="94" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="pLk-Cl-MT1">
+                                        <rect key="frame" x="20" y="8" width="374" height="29"/>
+                                        <segments>
+                                            <segment title="Week"/>
+                                            <segment title="Month"/>
+                                            <segment title="Year"/>
+                                        </segments>
                                         <connections>
-                                            <action selector="yearChanged:" destination="XE7-i6-VJD" eventType="valueChanged" id="XAV-i9-xDo"/>
-                                            <action selector="yearChanged:" destination="RFu-rE-geC" eventType="valueChanged" id="osK-bb-NzN"/>
+                                            <action selector="intervalChanged:" destination="XE7-i6-VJD" eventType="valueChanged" id="Uoe-TQ-wBe"/>
                                         </connections>
-                                    </stepper>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="U9D-a7-KC2" firstAttribute="centerY" secondItem="bp8-eb-FNn" secondAttribute="centerY" id="2tX-Ue-3Qb"/>
-                                    <constraint firstItem="yRp-s4-F3s" firstAttribute="centerY" secondItem="bp8-eb-FNn" secondAttribute="centerY" id="6h0-q7-mDw"/>
+                                    <constraint firstItem="pLk-Cl-MT1" firstAttribute="centerY" secondItem="bp8-eb-FNn" secondAttribute="centerY" id="0Sp-W2-WNR"/>
                                     <constraint firstAttribute="height" constant="44" id="7mg-pE-YyP"/>
-                                    <constraint firstAttribute="trailing" secondItem="yRp-s4-F3s" secondAttribute="trailing" constant="20" symbolic="YES" id="Ped-qI-vs9"/>
-                                    <constraint firstItem="yRp-s4-F3s" firstAttribute="leading" secondItem="U9D-a7-KC2" secondAttribute="trailing" constant="8" symbolic="YES" id="c0W-5R-Lar"/>
-                                    <constraint firstItem="U9D-a7-KC2" firstAttribute="leading" secondItem="bp8-eb-FNn" secondAttribute="leading" constant="20" symbolic="YES" id="jRn-r6-iee"/>
+                                    <constraint firstItem="pLk-Cl-MT1" firstAttribute="leading" secondItem="bp8-eb-FNn" secondAttribute="leading" constant="20" symbolic="YES" id="8tb-yC-qtt"/>
+                                    <constraint firstAttribute="trailing" secondItem="pLk-Cl-MT1" secondAttribute="trailing" constant="20" symbolic="YES" id="QIV-Pp-pEx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mC0-ns-Yzi" customClass="PieChartView" customModule="Charts">
@@ -879,10 +875,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="BOX-7V-2ga"/>
                     <connections>
+                        <outlet property="intervalSegmentedControl" destination="pLk-Cl-MT1" id="WDc-1t-DLT"/>
+                        <outlet property="intervalSelectionView" destination="bp8-eb-FNn" id="T0z-Fw-I9O"/>
                         <outlet property="pieChartView" destination="mC0-ns-Yzi" id="JYf-qx-t9h"/>
-                        <outlet property="yearLabel" destination="U9D-a7-KC2" id="94Q-pR-nTK"/>
-                        <outlet property="yearSelectionView" destination="bp8-eb-FNn" id="T0z-Fw-I9O"/>
-                        <outlet property="yearStepper" destination="yRp-s4-F3s" id="T8P-9L-SYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lC-hh-cPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
