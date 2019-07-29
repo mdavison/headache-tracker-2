@@ -24,6 +24,8 @@
 		90269F40229778B300A6EB6F /* MADCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F3F229778B300A6EB6F /* MADCalendar.swift */; };
 		90269F422299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */; };
 		9064A70B22DFFD48007DBD4A /* ChartInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064A70A22DFFD48007DBD4A /* ChartInterval.swift */; };
+		907E36B522E9304100C9832F /* HeadacheTracker2FastlaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907E36B422E9304100C9832F /* HeadacheTracker2FastlaneUITests.swift */; };
+		907E36BF22E930E500C9832F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907E36BE22E930E500C9832F /* SnapshotHelper.swift */; };
 		908FA68D228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */; };
 		908FA690228F4B1C00A80E72 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */; };
 		908FA69222909D6000A80E72 /* SeverityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */; };
@@ -35,6 +37,7 @@
 		909EB10322D424B700B70A29 /* HeadachesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB10222D424B700B70A29 /* HeadachesTests.swift */; };
 		909EB10522D6BC8500B70A29 /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB10422D6BC8500B70A29 /* CalendarTests.swift */; };
 		909EB11322DEAAF000B70A29 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909EB11222DEAAF000B70A29 /* CloudKit.framework */; };
+		90F50AA122E696AF00EFC0B8 /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F50AA022E696AF00EFC0B8 /* Seed.swift */; };
 		90F61CA122760E0D00BE47A4 /* HeadacheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */; };
 		90F61CA42276148500BE47A4 /* HeadacheTracker2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CA22276148500BE47A4 /* HeadacheTracker2.xcdatamodeld */; };
 		90F61CAC2276167C00BE47A4 /* Headache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */; };
@@ -86,6 +89,13 @@
 			remoteGlobalIDString = A58A4ED274A941CA248EA921;
 			remoteInfo = Charts;
 		};
+		907E36B722E9304100C9832F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 900060F0226D447A0022B686 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 900060F7226D447A0022B686;
+			remoteInfo = HeadacheTracker2;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,6 +135,10 @@
 		90269F3F229778B300A6EB6F /* MADCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADCalendar.swift; sourceTree = "<group>"; };
 		90269F412299FE2800A6EB6F /* CalendarCollectionReusableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionReusableHeaderView.swift; sourceTree = "<group>"; };
 		9064A70A22DFFD48007DBD4A /* ChartInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInterval.swift; sourceTree = "<group>"; };
+		907E36B222E9304000C9832F /* HeadacheTracker2FastlaneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadacheTracker2FastlaneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		907E36B422E9304100C9832F /* HeadacheTracker2FastlaneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTracker2FastlaneUITests.swift; sourceTree = "<group>"; };
+		907E36B622E9304100C9832F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907E36BE22E930E500C9832F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		908FA68C228F4A6C00A80E72 /* Headache+CoreDataClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClassTests.swift"; sourceTree = "<group>"; };
 		908FA68F228F4B1C00A80E72 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
 		908FA69122909D6000A80E72 /* SeverityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +151,7 @@
 		909EB10422D6BC8500B70A29 /* CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTests.swift; sourceTree = "<group>"; };
 		909EB10E22DEA5F400B70A29 /* HeadacheTracker2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeadacheTracker2.entitlements; sourceTree = "<group>"; };
 		909EB11222DEAAF000B70A29 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		90F50AA022E696AF00EFC0B8 /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
 		90F61CA022760E0D00BE47A4 /* HeadacheTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheTableViewController.swift; sourceTree = "<group>"; };
 		90F61CA32276148500BE47A4 /* HeadacheTracker2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadacheTracker2.xcdatamodel; sourceTree = "<group>"; };
 		90F61CAA2276167C00BE47A4 /* Headache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headache+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -176,6 +191,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		907E36AF22E9304000C9832F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -187,6 +209,7 @@
 				90F61CAE2276168700BE47A4 /* CoreData */,
 				90006111226D447B0022B686 /* HeadacheTracker2Tests */,
 				9000611C226D447B0022B686 /* HeadacheTracker2UITests */,
+				907E36B322E9304100C9832F /* HeadacheTracker2FastlaneUITests */,
 				900060F9226D447A0022B686 /* Products */,
 				909EB10F22DEA5F700B70A29 /* Frameworks */,
 			);
@@ -198,6 +221,7 @@
 				900060F8226D447A0022B686 /* HeadacheTracker2.app */,
 				9000610E226D447B0022B686 /* HeadacheTracker2Tests.xctest */,
 				90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */,
+				907E36B222E9304000C9832F /* HeadacheTracker2FastlaneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,6 +263,7 @@
 				909EB0FF22D2886100B70A29 /* MedicationsTests.swift */,
 				909EB10222D424B700B70A29 /* HeadachesTests.swift */,
 				909EB10422D6BC8500B70A29 /* CalendarTests.swift */,
+				90F50AA022E696AF00EFC0B8 /* Seed.swift */,
 			);
 			path = HeadacheTracker2UITests;
 			sourceTree = "<group>";
@@ -320,6 +345,16 @@
 				9064A70A22DFFD48007DBD4A /* ChartInterval.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		907E36B322E9304100C9832F /* HeadacheTracker2FastlaneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				907E36B422E9304100C9832F /* HeadacheTracker2FastlaneUITests.swift */,
+				907E36BE22E930E500C9832F /* SnapshotHelper.swift */,
+				907E36B622E9304100C9832F /* Info.plist */,
+			);
+			path = HeadacheTracker2FastlaneUITests;
 			sourceTree = "<group>";
 		};
 		908FA68E228F4AE600A80E72 /* Mocks */ = {
@@ -411,13 +446,31 @@
 			productReference = 90006119226D447B0022B686 /* HeadacheTracker2UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		907E36B122E9304000C9832F /* HeadacheTracker2FastlaneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907E36BC22E9304100C9832F /* Build configuration list for PBXNativeTarget "HeadacheTracker2FastlaneUITests" */;
+			buildPhases = (
+				907E36AE22E9304000C9832F /* Sources */,
+				907E36AF22E9304000C9832F /* Frameworks */,
+				907E36B022E9304000C9832F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				907E36B822E9304100C9832F /* PBXTargetDependency */,
+			);
+			name = HeadacheTracker2FastlaneUITests;
+			productName = HeadacheTracker2FastlaneUITests;
+			productReference = 907E36B222E9304000C9832F /* HeadacheTracker2FastlaneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		900060F0226D447A0022B686 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Morgan Davison";
 				TargetAttributes = {
@@ -441,6 +494,10 @@
 					};
 					90006118226D447B0022B686 = {
 						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 900060F7226D447A0022B686;
+					};
+					907E36B122E9304000C9832F = {
+						CreatedOnToolsVersion = 10.3;
 						TestTargetID = 900060F7226D447A0022B686;
 					};
 				};
@@ -467,6 +524,7 @@
 				900060F7226D447A0022B686 /* HeadacheTracker2 */,
 				9000610D226D447B0022B686 /* HeadacheTracker2Tests */,
 				90006118226D447B0022B686 /* HeadacheTracker2UITests */,
+				907E36B122E9304000C9832F /* HeadacheTracker2FastlaneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -507,6 +565,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		90006117226D447B0022B686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907E36B022E9304000C9832F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,8 +632,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				909EB10322D424B700B70A29 /* HeadachesTests.swift in Sources */,
+				90F50AA122E696AF00EFC0B8 /* Seed.swift in Sources */,
 				909EB10522D6BC8500B70A29 /* CalendarTests.swift in Sources */,
 				909EB10022D2886100B70A29 /* MedicationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907E36AE22E9304000C9832F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907E36B522E9304100C9832F /* HeadacheTracker2FastlaneUITests.swift in Sources */,
+				907E36BF22E930E500C9832F /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +664,11 @@
 			isa = PBXTargetDependency;
 			name = Charts;
 			targetProxy = 900C0EA722A422150077E653 /* PBXContainerItemProxy */;
+		};
+		907E36B822E9304100C9832F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 900060F7226D447A0022B686 /* HeadacheTracker2 */;
+			targetProxy = 907E36B722E9304100C9832F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -850,6 +930,46 @@
 			};
 			name = Release;
 		};
+		907E36B922E9304100C9832F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2FastlaneUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2FastlaneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadacheTracker2;
+			};
+			name = Debug;
+		};
+		907E36BA22E9304100C9832F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TEP68NZCD;
+				INFOPLIST_FILE = HeadacheTracker2FastlaneUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgandavison.HeadacheTracker2FastlaneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadacheTracker2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -885,6 +1005,15 @@
 			buildConfigurations = (
 				90006129226D447B0022B686 /* Debug */,
 				9000612A226D447B0022B686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		907E36BC22E9304100C9832F /* Build configuration list for PBXNativeTarget "HeadacheTracker2FastlaneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907E36B922E9304100C9832F /* Debug */,
+				907E36BA22E9304100C9832F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

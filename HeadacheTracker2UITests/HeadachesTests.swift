@@ -31,7 +31,7 @@ class HeadachesTests: XCTestCase {
         today = nil
     }
     
-    func testAddHeadache() {
+    func testAddHeadache() {        
         app.navigationBars["Headaches"].buttons["Add"].tap()
         app.navigationBars["New Headache"].buttons["Done"].tap()
         
