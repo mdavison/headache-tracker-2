@@ -59,11 +59,12 @@ public class Headache: NSManagedObject {
             }
             
             let meds = headache.getMedicationsString()
-            let headacheNote = headache.note ?? ""
+            let headacheNote = headache.note ?? " "
             
             csvString = csvString + """
-"\(dateString)",\(headache.severity),"\(meds)","\(headacheNote)"
+"\(dateString)","\(headache.severity)","\(meds)","\(headacheNote)"
 """
+            csvString = csvString + "\n"
         }
         
         return csvString.data(using: String.Encoding.utf8, allowLossyConversion: false)
@@ -267,7 +268,7 @@ public class Headache: NSManagedObject {
             displayArray.append("\(dose.quantity) " + dose.medication.name)
         }
         
-        return displayArray.joined(separator: ", ")
+        return displayArray.joined(separator: "; ")
     }
     
     func getMedicationsDoses() -> [Medication: Int]? {
