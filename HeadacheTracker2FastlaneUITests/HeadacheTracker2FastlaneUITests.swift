@@ -36,6 +36,15 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func DeleteHeadaches() {
+        let tablesQuery = app.tables
+        
+        while tablesQuery.cells.firstMatch.exists {
+            tablesQuery.cells.firstMatch.swipeLeft()
+            tablesQuery.buttons["Delete"].tap()
+        }
+    }
+    
     func SettingsScreen() {
         // Navigate to the Settings tab
         app.tabBars.children(matching: .button).element(boundBy: 4).tap()
@@ -112,6 +121,7 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         tablesQuery.sliders["severitySlider"].press(forDuration: 0.5, thenDragTo: severity)
         
         tablesQuery.staticTexts["Acetaminophen"].tap()
+        tablesQuery.staticTexts["Acetaminophen"].tap()
         
         let doneButton = app.navigationBars["New Headache"].buttons["Done"]
         doneButton.tap()
@@ -144,6 +154,7 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         tablesQuery.sliders["severitySlider"].press(forDuration: 0.5, thenDragTo: severity)
         
         tablesQuery.staticTexts["Ibuprofen"].tap()
+        tablesQuery.staticTexts["Ibuprofen"].tap()
         
         doneButton.tap()
         
@@ -158,6 +169,10 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         tablesQuery.sliders["severitySlider"].press(forDuration: 0.5, thenDragTo: severity)
         
         tablesQuery.staticTexts["Ibuprofen"].tap()
+        tablesQuery.staticTexts["Ibuprofen"].tap()
+        tablesQuery.staticTexts["Coffee"].tap()
+        tablesQuery.staticTexts["Acetaminophen"].tap()
+        tablesQuery.staticTexts["Acetaminophen"].tap()
         
         doneButton.tap()
         
@@ -183,6 +198,8 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         tablesQuery.sliders["severitySlider"].press(forDuration: 0.5, thenDragTo: severity)
         
         tablesQuery.staticTexts["Coffee"].tap()
+        tablesQuery.staticTexts["Acetaminophen"].tap()
+        tablesQuery.staticTexts["Acetaminophen"].tap()
         
         doneButton.tap()
         
@@ -193,6 +210,8 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         tablesQuery.sliders["severitySlider"].press(forDuration: 0.5, thenDragTo: severity)
         
         tablesQuery.staticTexts["Coffee"].tap()
+        tablesQuery.staticTexts["Coffee"].tap()
+        tablesQuery.staticTexts["Acetaminophen"].tap()
         
         doneButton.tap()
         
@@ -208,7 +227,7 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         snapshot("01BarChart")
     }
     
-    func ShowPieChart() {
+    func PieChart() {
         // Navigate to the Pie Chart tab
         app.tabBars.children(matching: .button).element(boundBy: 3).tap()
         
@@ -216,7 +235,7 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         snapshot("01PieChart")
     }
     
-    func testShowAddHeadache() {
+    func ShowAddHeadache() {
         let addHeadacheButton = app.navigationBars["Headaches"].buttons["Add"]
         addHeadacheButton.tap()
         
@@ -224,5 +243,11 @@ class HeadacheTracker2FastlaneUITests: XCTestCase {
         snapshot("01AddHeadache")
     }
 
-
+    func ShowCalendar() {
+        // Navigate to the Calendar tab
+        app.tabBars.children(matching: .button).element(boundBy: 1).tap()
+        
+        // Take a screenshot
+        snapshot("01Calendar")
+    }
 }
