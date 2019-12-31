@@ -34,7 +34,7 @@ class Seed: XCTestCase {
     }
     
     // Prepend "test" to run this
-    func testAddMedications() {
+    func AddMedications() {
         // Navigate to the Settings tab
         app.tabBars.children(matching: .button).element(boundBy: 4).tap()
         
@@ -78,7 +78,7 @@ class Seed: XCTestCase {
     }
     
     // Prepend "test" to run this
-    func testAddHeadaches() {
+    func AddHeadaches() {
         let addHeadacheButton = app.navigationBars["Headaches"].buttons["Add"]
         
         // 1

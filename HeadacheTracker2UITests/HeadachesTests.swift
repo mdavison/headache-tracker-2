@@ -81,9 +81,10 @@ class HeadachesTests: XCTestCase {
         tablesQuery.textFields["Ibuprofen"].tap()
         tablesQuery.textFields.firstMatch.typeText("Test Medication")
         
-        let descTextField = tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element
+//        let descTextField = tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element
+        let descTextField = tablesQuery/*@START_MENU_TOKEN@*/.textFields["100 mg tablet"]/*[[".cells.textFields[\"100 mg tablet\"]",".textFields[\"100 mg tablet\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         descTextField.tap()
-        descTextField.typeText("10 mg tablet")
+//        descTextField.typeText("10 mg tablet")
         
         app.navigationBars["New Medication"].buttons["Done"].tap()
         app.navigationBars["Medications"].buttons["Done"].tap()
@@ -123,9 +124,9 @@ class HeadachesTests: XCTestCase {
         tablesQuery.textFields["Ibuprofen"].tap()
         tablesQuery.textFields.firstMatch.typeText("Test Medication")
         
-        let descTextField = tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .textField).element
+        let descTextField = tablesQuery/*@START_MENU_TOKEN@*/.textFields["100 mg tablet"]/*[[".cells.textFields[\"100 mg tablet\"]",".textFields[\"100 mg tablet\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         descTextField.tap()
-        descTextField.typeText("20 mg tablet")
+//        descTextField.typeText("20 mg tablet")
         
         app.navigationBars["New Medication"].buttons["Done"].tap()
         app.navigationBars["Medications"].buttons["Done"].tap()
