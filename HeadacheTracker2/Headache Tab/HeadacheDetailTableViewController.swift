@@ -15,7 +15,7 @@ class HeadacheDetailTableViewController: UITableViewController {
     var coreDataStack: CoreDataStack?
     weak var datePicker: UIDatePicker!
     weak var severitySlider: UISlider!
-    weak var noteTextView: UITextView!
+    weak var noteTextView: UITextView?
     var medications = [Medication]()
     var headacheMedicationQuantities = [Medication:Int]()
     
@@ -109,7 +109,7 @@ class HeadacheDetailTableViewController: UITableViewController {
         
         headache.date = headacheDate
         headache.severity = Int16(severitySlider.value)
-        headache.note = noteTextView.text
+        headache.note = noteTextView?.text
         
         if editingHeadache {
             headache.updateDoses(coreDataStack: coreDataStack, medicationQuantities: headacheMedicationQuantities)
@@ -201,7 +201,7 @@ extension HeadacheDetailTableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.HeadacheNoteCellReuseIdentifier, for: indexPath) as! NoteTableViewCell
             noteTextView = cell.noteTextView
             if let headache = headache {
-                noteTextView.text = headache.note
+                noteTextView?.text = headache.note
             }
             
             return cell
